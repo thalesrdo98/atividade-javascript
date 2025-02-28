@@ -1,15 +1,9 @@
-# Atividade de JavaScript
+Execute o script em um ambiente que suporte prompt(), como o console do navegador.
 
-Este repositório contém a implementação da atividade prática de fundamentos de JavaScript.
+Insira seu nome quando solicitado.
 
-## Funcionalidades:
+Insira sua idade.
 
-- Solicita o nome, idade e hobbies do usuário.
-- Exibe uma mensagem dependendo da idade (Menor ou Maior de idade).
-- Exibe os hobbies do usuário utilizando um laço de repetição.
-- Contém uma função personalizada que exibe uma saudação com nome e idade.
+Digite seus hobbies separados por vírgula.
 
-## Como rodar:
-
-1. Clone este repositório.
-2. Execute o arquivo `atividade.js` em um ambiente JavaScript, como o Node.js.
+Veja a saída no console com informações sobre sua idade e hobbies.
