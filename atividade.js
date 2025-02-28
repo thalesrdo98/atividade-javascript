@@ -1,33 +1,11 @@
-
-const readlineSync = require('readline-sync');
-
 const usuario = {
-  nome: readlineSync.question("Digite seu nome: "),
-  idade: parseInt(readlineSync.question("Digite sua idade: ")), 
-  hobbies: []
+    nome: prompt("Nome:"),
+    idade: Number(prompt("Idade:")),
+    hobbies: prompt("Hobbies (separados por vírgula):").split(",").map(h => h.trim())
 };
 
-console.log("Digite três hobbies:");
-for (let i = 0; i < 3; i++) {
-  usuario.hobbies.push(readlineSync.question(`Hobby ${i + 1}: `));
-}
+console.log(usuario.idade < 18 ? "Menor de idade" : "Maior de idade");
+usuario.hobbies.forEach((h, i) => console.log(`${i + 1}. ${h}`));
 
-
-if (usuario.idade < 18) {
-  console.log("Menor de idade");
-} else {
-  console.log("Maior de idade");
-}
-
-
-console.log("Hobbies:");
-usuario.hobbies.forEach(hobby => {
-  console.log(`- ${hobby}`);
-});
-
-
-function exibirMensagem(nome, idade) {
-  return `Olá, ${nome}! Você tem ${idade} anos.`;
-}
-
+const exibirMensagem = (n, i) => `Olá, ${n}! Você tem ${i} anos.`;
 console.log(exibirMensagem(usuario.nome, usuario.idade));
